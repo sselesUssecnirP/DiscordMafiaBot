@@ -2,7 +2,7 @@
   "name": "discordmafiabot",
   "version": "1.0.0",
   "description": "A mafia bot to play mafia in any game of your choice!",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,9 @@
   ],
   "author": "sselesUssecnirP",
   "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0"
