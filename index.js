@@ -6,13 +6,6 @@ const client = new Client({
     disableEveryone: true
 });
 
-client.commands = new Collection();
-client.aliases = new Collection();
-
-["command"].forEach(handler => {
-    require(`./handler/${handler}`)(client);
-});
-
 config({
     path: __dirname + "/.env"
 });
@@ -40,11 +33,29 @@ client.on("message", async message => {
 
     if (cmd.length === 0) return;
 
-    let command = client.commands.get(cmd);
-    if (!command) command = client.commands.get(client.aliases.get(cmd));
-    
-    if (command) {
-        command.run(client, message, args);
+    if (cmd === "ping") {
+        const msg = await message.channel.send(`:ping_pong: Pinging...`);
+
+        msg.edit(`:ping_pong: Pong!\nLatency is ${Math.floor(msg.createdAt - message.createdAt)}ms\nAPI Latency is ${Math.round(client.ping)}ms`)
     }
+
+    if (cmd === "mafrole") {
+            if(message.deletable) {
+                message.delete()
+            }
+
+            let num = Math.round(Math.random() * 4);
+            console.log(num)
+
+            if (num = 1 || 4) {
+                //message.member.createDM()
+                message.member.send("You are part of the Mafia!")
+            }
+
+            if (num = 2 || 3) {
+                //message.member.createDM()
+                message.member.send("You are Innocent!");
+            } 
+    };
 });
 client.login(process.env.TOKEN);
