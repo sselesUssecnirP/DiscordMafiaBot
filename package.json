@@ -1,0 +1,22 @@
+{
+  "name": "discordmafiabot",
+  "version": "1.0.0",
+  "description": "A mafia bot to play mafia in any game of your choice!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "discordmafiabot"
+  },
+  "keywords": [
+    "mafia"
+  ],
+  "author": "sselesUssecnirP",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  }
+}
