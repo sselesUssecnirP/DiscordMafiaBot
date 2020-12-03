@@ -47,12 +47,12 @@ client.on("message", async message => {
             let num = Math.floor(Math.random(5));
             console.log(num)
 
-            if (num = 1 || 4) {
+            if (num == 1 || 4) {
                 //message.member.createDM()
                 message.member.send("You are part of the Mafia!")
             }
 
-            if (num = 2 || 3) {
+            if (num == 2 || 3) {
                 //message.member.createDM()
                 message.member.send("You are Innocent!");
             } 
