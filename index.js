@@ -44,7 +44,7 @@ client.on("message", async message => {
                 message.delete()
             }
 
-            let num = Math.round(Math.random() * 4);
+            let num = Math.floor(Math.random(5));
             console.log(num)
 
             if (num = 1 || 4) {
