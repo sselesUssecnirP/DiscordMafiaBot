@@ -1,5 +1,1 @@
-worker: node index.js
-
-"scripts": {
-    "start": "node index.js"
-}
+worker: node mafbot
